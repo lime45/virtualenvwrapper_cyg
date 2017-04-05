@@ -1,0 +1,14 @@
+
+if [ -v WORKON_HOME ] ; then
+  if [ -v 1 ] ; then
+    /bin/rm -rf $WORKON_HOME/$1
+  else
+    echo "Pass a virtualenv name to be removed"
+    echo "=============================================================================="
+    /bin/ls -1 $WORKON_HOME
+  fi
+else
+  echo "\$WORKON_HOME is not set"
+fi
+
+

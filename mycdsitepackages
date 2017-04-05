@@ -1,0 +1,14 @@
+
+if [ -v WORKON_HOME ] ; then
+  if [ -v 1 ] ; then
+    cd $WORKON_HOME/$1/Lib/site-packages
+  else
+    echo "Pass a virtualenv name to cd to"
+    echo "=============================================================================="
+    /bin/ls -1 $WORKON_HOME
+  fi
+else
+  echo "\$WORKON_HOME is not set"
+fi
+
+

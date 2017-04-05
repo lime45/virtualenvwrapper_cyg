@@ -1,0 +1,14 @@
+
+if [ -v WORKON_HOME ] ; then
+  if [ -v 1 ] ; then
+    source $WORKON_HOME/$1/Scripts/activate
+  else
+    echo "Pass a name to activate one of the following virtualenvs:"
+    echo "=============================================================================="
+    /bin/ls -1 $WORKON_HOME
+  fi
+else
+  echo "\$WORKON_HOME is not set"
+fi
+
+
