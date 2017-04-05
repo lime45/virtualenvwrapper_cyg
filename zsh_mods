@@ -1,0 +1,10 @@
+   # specific to CYGWIN
+   if [ "$(expr substr $(uname -s) 1 6)" = "CYGWIN" ]; then
+     alias cdsitepackages="source $HOME/bin/mycdsitepackages"
+     alias lssitepackages="source $HOME/bin/mylssitepackages"
+     alias mkvirtualenv="source $HOME/bin/mymkvirtualenv"
+     alias rmvirtualenv="source $HOME/bin/myrmvirtualenv"
+     alias workon="source $HOME/bin/myworkon"
+     # set tab completion to complete directories in $WORKON_HOME
+     compdef '_files -W "$WORKON_HOME"' workon cdsitepackages lssitepackages rmvirtualenv
+
